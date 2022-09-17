@@ -1,9 +1,12 @@
 fn odd_count(n: u64) -> u64 {
-    let mut num_count = 0;
-    for i in 1..n {
-        if i % 2 != 0 {
-            num_count += 1;
-        }
+    let mut new_n: u64 = n;
+    if new_n < 1 {
+        return 0;
+    } 
+    if new_n % 2 != 0 {
+        new_n -= 1;
     }
-    num_count
-}
+    let outp = new_n / 2;
+    outp
+} 
+
